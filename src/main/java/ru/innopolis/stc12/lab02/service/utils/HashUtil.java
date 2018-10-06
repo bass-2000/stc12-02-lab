@@ -1,4 +1,4 @@
-package ru.innopolis.stc12.servlets.service.utils;
+package ru.innopolis.stc12.lab02.service.utils;
 
 import org.apache.log4j.Logger;
 
@@ -8,6 +8,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class HashUtil {
     private static Logger logger = Logger.getLogger(HashUtil.class);
+
     public static String stringToMD5(String password) {
         MessageDigest messageDigest = null;
         byte[] digest = new byte[0];

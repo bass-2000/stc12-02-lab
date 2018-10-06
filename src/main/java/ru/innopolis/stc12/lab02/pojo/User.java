@@ -1,31 +1,61 @@
-package ru.innopolis.stc12.servlets.pojo;
+package ru.innopolis.stc12.lab02.pojo;
 
 public class User {
     private Integer id;
-    private String name;
+    private String username;
     private String password;
-    private Integer role;
+    private Role role;
+    private Integer chiefId;
+    private Integer salary;
 
-    public User(Integer id, String name, String password, Integer role) {
+    public User(Integer id, String username, String password, Role role, Integer chiefId, Integer salary) {
         this.id = id;
-        this.name = name;
+        this.username = username;
         this.password = password;
         this.role = role;
+        this.chiefId = chiefId;
+        this.salary = salary;
     }
 
-    public User(String name, String password, Integer role) {
-        this.name = name;
+    public User(String username, String password, Role role, Integer chiefId, Integer salary) {
+        this.username = username;
         this.password = password;
         this.role = role;
+        this.chiefId = chiefId;
+        this.salary = salary;
+    }
+
+    public User(Integer id, String username, Role role, Integer chiefId, Integer salary) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+        this.chiefId = chiefId;
+        this.salary = salary;
+    }
+
+    public User(String username, Role role, Integer chiefId, Integer salary) {
+        this.username = username;
+        this.role = role;
+        this.chiefId = chiefId;
+        this.salary = salary;
+    }
+
+    public User(String username, Role role, Integer salary) {
+        this.username = username;
+        this.role = role;
+        this.salary = salary;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", role=" + role +
+                ", chiefId=" + chiefId +
+                ", salary=" + salary +
                 '}';
     }
 
@@ -37,12 +67,12 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String name) {
+        this.username = name;
     }
 
     public String getPassword() {
@@ -53,11 +83,27 @@ public class User {
         this.password = password;
     }
 
-    public Integer getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(Integer role) {
+    public void setRoleId(Role role) {
         this.role = role;
+    }
+
+    public Integer getChiefId() {
+        return chiefId;
+    }
+
+    public void setChiefId(Integer chiefId) {
+        this.chiefId = chiefId;
+    }
+
+    public Integer getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Integer salary) {
+        this.salary = salary;
     }
 }

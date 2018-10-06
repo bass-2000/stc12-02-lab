@@ -1,4 +1,4 @@
-package ru.innopolis.stc12.servlets.repository.connectionManager;
+package ru.innopolis.stc12.lab02.repository.connectionManager;
 
 import org.apache.log4j.Logger;
 
@@ -11,8 +11,9 @@ import java.util.Properties;
 
 public class ConnectionManagerJdbcImpl implements ConnectionManager {
     private static ConnectionManager connectionManager;
-    Properties property = new Properties();
     private static Logger logger = Logger.getLogger(ConnectionManagerJdbcImpl.class);
+    Properties property = new Properties();
+
     private ConnectionManagerJdbcImpl() {
     }
 

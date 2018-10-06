@@ -1,9 +1,9 @@
-package ru.innopolis.stc12.servlets.controllers;
+package ru.innopolis.stc12.lab02.controllers;
 
 import org.apache.log4j.Logger;
-import ru.innopolis.stc12.servlets.repository.dao.UserDaoImpl;
-import ru.innopolis.stc12.servlets.service.UserService;
-import ru.innopolis.stc12.servlets.service.UserServiceImpl;
+import ru.innopolis.stc12.lab02.repository.dao.UserDaoImpl;
+import ru.innopolis.stc12.lab02.service.UserService;
+import ru.innopolis.stc12.lab02.service.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
         try {
             if (userService.checkAuth(login, password)) {
-                int role = userService.getRole(login);
+                int role = userService.getRoleId(login);
                 req.getSession().setAttribute(LOGIN, login);
                 req.getSession().setAttribute("role", role);
                 resp.sendRedirect("/inner/dashboard");
