@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar build/lib/webapp-runner-8.5.11.3.jar build/libs/stc12-02-lab-1.0-SNAPSHOT.war
+web: java -Dserver.port=$PORT -jar build/lib/webapp-runner-8.5.11.3.jar build/libs/stc12-02-lab-1.0-SNAPSHOT.war
