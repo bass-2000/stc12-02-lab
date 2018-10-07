@@ -12,7 +12,7 @@ import java.util.Properties;
 public class ConnectionManagerJdbcImpl implements ConnectionManager {
     private static ConnectionManager connectionManager;
     private static Logger logger = Logger.getLogger(ConnectionManagerJdbcImpl.class);
-    Properties property = new Properties();
+    private Properties property = new Properties();
 
     private ConnectionManagerJdbcImpl() {
     }
