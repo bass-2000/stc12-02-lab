@@ -1,1 +1,1 @@
-web: java -Dserver.port=8080 -jar build/lib/webapp-runner-8.5.11.3.jar build/libs/stc12-02-lab-1.0-SNAPSHOT.war
+web: java -jar build/lib/webapp-runner-8.5.11.3.jar build/libs/stc12-02-lab-1.0-SNAPSHOT.war
