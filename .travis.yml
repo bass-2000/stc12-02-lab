@@ -25,7 +25,7 @@ cache:
   - $HOME/.gradle/wrapper/
 
 script:
-- ./gradlew assemble
+- ./gradlew clean build
 
 
 notifications:
