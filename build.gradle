@@ -25,4 +25,15 @@ dependencies {
     compile 'javax.servlet:javax.servlet-api:3.1.0'
     compile 'javax.servlet:jstl:1.2'
     compile group: 'org.postgresql', name: 'postgresql', version: '42.1.4'
+    compile 'com.github.jsimone:webapp-runner:8.5.11.3'
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+    into "$buildDir/lib"
+    from(configurations.compile)
+}
+
+stage.dependsOn(copyToLib)
