@@ -8,7 +8,7 @@ deploy:
   provider: heroku
   api_key:
     secure: $HEROKU_API_KEY
-app: stc12-lab02-boyko
+app: mylabboy
 
 jdk:
 - oraclejdk8
