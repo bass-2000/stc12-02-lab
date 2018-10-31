@@ -4,6 +4,7 @@ plugins {
     id "org.sonarqube" version "2.6.2"
     id 'idea'
 }
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 group 'stc12-innopolis-lab'
 version '1.0-SNAPSHOT'
@@ -34,8 +35,10 @@ task stage() {
 war.mustRunAfter clean
 
 task copyToLib(type: Copy) {
-    into "$buildDir/lib"
-    from(configurations.compile)
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
 }
 
 stage.dependsOn(copyToLib)
