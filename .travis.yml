@@ -9,6 +9,8 @@ deploy:
   api_key:
     secure: $HEROKU_API_KEY
 app: mylabboy
+edge:
+    branch: heroku-v3
 
 jdk:
 - oraclejdk8
